@@ -12,7 +12,7 @@ const TabelaClientes = props => {
         .get("https://ironrest.herokuapp.com/talk2go")
         .then((response) => {
             console.log(response.data);
-            setListaCliente([...response.data])
+            // setListaCliente([...response.data])
         }).catch((err) => console.log(err));
         
     }, []);
@@ -40,7 +40,7 @@ const TabelaClientes = props => {
                     <tr className="linha-cliente">
                         <th scope="row">1</th>
                         
-                            <td><setListaCliente /></td>
+                            <td></td>
                             <td><img src="" alt="foto do cliente"/></td>
                             <td>Joao Melo</td>
                             <td>11 989548455</td>
