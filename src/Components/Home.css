@@ -1,5 +1,7 @@
-.App {
+.Home{
   text-align: center;
+  background-image: url(https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  
 }
 
 .App-logo {
@@ -14,7 +16,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+ 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,6 +28,17 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.clientevent {
+  display: flex;
+  border: 2px solid blue;
+  justify-content: space-around;
+ 
+}
+.card {
+  width: 10rem;
+  
 }
 
 @keyframes App-logo-spin {

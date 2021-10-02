@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    
+}
+
+.button-inicial {
+  margin-top: 15px;
+  width: 300px;
+  padding: 10px 5px;
+  border-radius: 10px;
+  border: 1px solid black;
+  
+  
+  
+}
+
+#loja {
+ 
+  background-color: rgb(228, 214, 92)
+}
+
+#hotsite {
+  background-color: rgb(204, 149, 11);
+}
+
+#siteAgaxtur {
+  background-color: rgb(196, 179, 28);
+}
+
+
+.button-inicial button:hover{
+    background-color: blue;
+}
+
+.canais {
+  border-radius: 360px;
+  padding: 10px;
+}
