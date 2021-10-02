@@ -1,20 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './TabelaClientes.css';
+import { useState } from "react";
+import axios from "axios";
 
 const TabelaClientes = props => {
+
+    const [listaClientes, setListaCliente] = useState([]);
+
+    useEffect(() => {
+        axios
+        .get("https://ironrest.herokuapp.com/talk2go")
+        .then((response) => {
+            console.log(response.data);
+            setListaCliente([...response.data])
+        }).catch((err) => console.log(err));
+        
+    }, []);
    
-// //     const response = await axios.get("https://ironrest.herokuapp.com/talk2go")
-       
 
-// //     console.log(response.data);
-// //    }catch(err){
-// //     console.log(err)
-//    }
-
-// }
     // GET - SALVA NO OBJETO RESPONSE - INFO VAI ESTAR DENTRO DE RESPONSE.DATA - COLOCA ESSAS INFO DENTRO DO MEU STATE
     return (
-        <table class="table">
+        <table className="table">
             <thead>
                 <tr>
                     <th scope="col">Id</th>
@@ -34,7 +40,7 @@ const TabelaClientes = props => {
                     <tr className="linha-cliente">
                         <th scope="row">1</th>
                         
-                            <td>Joao amigo do Marco</td>
+                            <td><setListaCliente /></td>
                             <td><img src="" alt="foto do cliente"/></td>
                             <td>Joao Melo</td>
                             <td>11 989548455</td>
