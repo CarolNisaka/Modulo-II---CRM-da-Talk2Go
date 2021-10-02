@@ -5,7 +5,7 @@ import axios from "axios";
 
 function CriarCliente () {
 
-    const [createClient, setCreateClient] = useState(false);
+    
     const [foto, setFoto] = useState('');
     const [apelido, setApelido] = useState('');
     const [nome, setNome] = useState('');
@@ -168,11 +168,10 @@ function CriarCliente () {
 
 
                             <button 
-                           type="submit" 
-                           className="btn btn-success"
-                        //    onClick={(event) => setCreateClient(!createClient)}
-                           >
-                           Criar Cliente
+                                type="submit" 
+                                className="btn btn-success"
+                                >
+                                Criar Cliente
                            </button>
 
                                                               
