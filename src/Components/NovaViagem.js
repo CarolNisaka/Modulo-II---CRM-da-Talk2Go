@@ -1,3 +1,4 @@
+import CriarCliente from "./CriarCliente";
 
 
 function NovaViagem () {
@@ -97,7 +98,12 @@ function NovaViagem () {
             <div className="col-5">
                 <p>O Joao (apelido) é o ?</p>
                     <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Joao Silva Tel: (11) 95454-4027" />
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    placeholder="Joao Silva Tel: (11) 95454-4027" 
+                    // value={} trazer sugestao da lista de clientes pelo apelido
+                    />
                     <button class="btn btn-outline-secondary" type="button" id="button-addon2">Sim</button>
                     </div>
 
@@ -107,6 +113,8 @@ function NovaViagem () {
                     </div>      
 
                 <p>Ou esse é um novo cliente?</p>     
+                <button>Criar Cliente</button>
+                <p>fazer via route ou trazer o componente aqui?</p>
                        
                     
 

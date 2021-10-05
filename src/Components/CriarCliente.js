@@ -25,7 +25,7 @@ function CriarCliente () {
        try{
         const response = await axios.post("https://ironrest.herokuapp.com/talk2go",
         {
-	
+            
             foto: foto,
             apelido: apelido,
             nome: nome,
@@ -64,8 +64,8 @@ function CriarCliente () {
                                    value={foto}
                                    onChange={(event) => setFoto(event.target.value)}
                                />
-                               <span className="message error">Erro text Example</span>
-                               <span className="message success">Ok</span>
+                               {/* <span className="message error">Erro text Example</span>
+                               <span className="message success">Ok</span> */}
 
                                 <input 
                                    className="form-control"
