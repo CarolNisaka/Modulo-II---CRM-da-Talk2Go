@@ -3,7 +3,9 @@ import './TabelaClientes.css';
 import { useState } from "react";
 import axios from "axios";
 
-const TabelaClientes = props => {
+import { Link } from "react-router-dom";
+
+const TabelaClientes = () => {
 
     const [listaClientes, setListaCliente] = useState([]);
 
@@ -55,8 +57,8 @@ const TabelaClientes = props => {
                             <td>{clientes.passaporte}</td>
                             <td>{clientes.consultorPrincipal}</td>
                             <td>
-                            <button>Editar</button>
-                            <button>Deletar</button>
+                            <Link to="/editarcliente" className="btn btn-primary">Editar Cliente</Link>
+                            <Link to="/excluircliente" className="btn btn-secondary">Excluir Cliente</Link>
                             </td>
                     </tr>
                     ))}   {/* vou chamar aqui os clientes do banco de dados -com props e map? AULA DE FORMA 00:22:20 e em 00:33:21 */}

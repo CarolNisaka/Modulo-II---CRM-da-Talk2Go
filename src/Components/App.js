@@ -11,6 +11,7 @@ import IniciarAtendimento from './IniciarAtendimento';
 import Play from './Play';
 import NovaViagem from './NovaViagem';
 import CriarCliente from './CriarCliente';
+import EditarCliente from './EditarCliente';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route exact path="/play" component={Play} />
         <Route exact path="/novaviagem" component={NovaViagem} />
         <Route exact path="/cliente" component={CriarCliente} />
+        <Route exact path="/editarcliente" component={EditarCliente} />
        
       </BrowserRouter>
     </div>
