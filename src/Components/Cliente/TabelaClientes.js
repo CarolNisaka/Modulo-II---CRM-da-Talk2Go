@@ -2,25 +2,24 @@ import React, { useEffect } from "react";
 import './TabelaClientes.css';
 import { useState } from "react";
 import axios from "axios";
-
 import { Link } from "react-router-dom";
 
 const TabelaClientes = () => {
 
-    const [listaClientes, setListaCliente] = useState([]);
+    const [listaClientes, setListaClientes] = useState([]);
 
     useEffect(() => {
         axios
         .get("https://ironrest.herokuapp.com/talk2go")
         .then((response) => {
             console.log(response.data);
-            setListaCliente([...response.data])
+            setListaClientes([...response.data])
         }).catch((err) => console.log(err));
         
     }, []);
    
     
-    // invocar aqui o setListaCliente
+    
     //GET - SALVA NO OBJETO RESPONSE - INFO VAI ESTAR DENTRO DE RESPONSE.DATA - COLOCA ESSAS INFO DENTRO DO MEU STATE
     return (
         <table className="table">
@@ -44,9 +43,15 @@ const TabelaClientes = () => {
                     {listaClientes.map(clientes => (
                     <tr className="linha-cliente">
                         
-                        
+                        {/* //aqui que coloco a key????? */}
                             <td>{clientes._id}</td>
-                            <td><img src={clientes.foto} alt="foto do cliente"/></td>
+                            <td>
+                                <img 
+                                src={clientes.foto} 
+                                alt={clientes.nome}
+                                style={{maxHeight:"100px"}}
+                                />
+                            </td>
                             <td>{clientes.apelido}</td>
                             <td>{clientes.nome}</td>
                             <td>{clientes.celular}</td>
@@ -57,7 +62,7 @@ const TabelaClientes = () => {
                             <td>{clientes.passaporte}</td>
                             <td>{clientes.consultorPrincipal}</td>
                             <td>
-                            <Link to="/editarcliente" className="btn btn-primary">Editar Cliente</Link>
+                            <Link to={`/editarcliente/${clientes._id}`} className="btn btn-primary">Editar Cliente</Link>
                             <Link to="/excluircliente" className="btn btn-secondary">Excluir Cliente</Link>
                             </td>
                     </tr>

@@ -1,4 +1,4 @@
-import CriarCliente from "./CriarCliente";
+import CriarCliente from "../Cliente/CriarCliente";
 
 
 function NovaViagem () {

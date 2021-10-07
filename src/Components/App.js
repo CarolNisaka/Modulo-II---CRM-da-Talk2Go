@@ -7,11 +7,11 @@ import Home from './Home';
 import SobreTalk2Go from './SobreTalk2Go';
 import NavBar from './NavBar';
 import Login from './Login';
-import IniciarAtendimento from './IniciarAtendimento';
-import Play from './Play';
-import NovaViagem from './NovaViagem';
-import CriarCliente from './CriarCliente';
-import EditarCliente from './EditarCliente';
+import IniciarAtendimento from './Atendimento/IniciarAtendimento';
+import Play from './Atendimento/Play';
+import NovaViagem from './Atendimento/NovaViagem';
+import CriarCliente from './Cliente/CriarCliente';
+import DetalhesDoCliente from './Cliente/DetalhesDoCliente';
 
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
         <Route exact path="/play" component={Play} />
         <Route exact path="/novaviagem" component={NovaViagem} />
         <Route exact path="/cliente" component={CriarCliente} />
-        <Route exact path="/editarcliente" component={EditarCliente} />
+        <Route exact path="/editarcliente/:id" component={DetalhesDoCliente} />
        
       </BrowserRouter>
     </div>

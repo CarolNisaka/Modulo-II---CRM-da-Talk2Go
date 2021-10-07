@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import NovaViagem from "./NovaViagem";
 
 
 function Play () {
     const [novaViagem, setNovaViagem] = useState(false);
-    const [comprarMais, setComprarMais] = useState(false);
-    const [alterarViagem, setAlterarViagem] = useState(false);
-    const [cancelarViagem, setCancelarViagem] = useState(false);
+    // const [comprarMais, setComprarMais] = useState(false);
+    // const [alterarViagem, setAlterarViagem] = useState(false);
+    // const [cancelarViagem, setCancelarViagem] = useState(false);
 
     return (
         <div>

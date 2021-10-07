@@ -3,6 +3,8 @@ import "./CriarCliente.css";
 import TabelaClientes from "./TabelaClientes";
 import axios from "axios";
 
+
+// redirecionar depois de criar - 02:55 da aula de characters (crud) usando metodo history
 function CriarCliente () {
 
     
