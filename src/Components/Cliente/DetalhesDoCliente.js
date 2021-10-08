@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function DetalhesDoCliente (props) {
     const [clienteInfo, setClienteInfo] = useState({
-        id:"",
+       
         foto: "",
         apelido: "",
         nome: "",
@@ -38,11 +38,11 @@ function DetalhesDoCliente (props) {
                 alt={clienteInfo.nome}
                 style={{maxWidth:"150px"}}
             />
-            <h4>{clienteInfo._id}</h4>
+            {/* <h4>{clienteInfo._id}</h4> */}
             <h1>{clienteInfo.nome}</h1>
             <h2>{clienteInfo.email}</h2>
 
-            <Link to={`cliente/editarcliente/${clienteInfo._id}`}>Editar Cliente</Link>
+            <Link to={`/cliente/editarcliente/${clienteInfo.id}`}>Editar Cliente</Link>
         </div>
     );
 }

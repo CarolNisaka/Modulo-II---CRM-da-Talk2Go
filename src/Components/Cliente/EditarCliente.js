@@ -6,7 +6,7 @@ import axios from "axios";
 function EditarCliente () {
 
     const [clienteInfo, setClienteInfo] = useState({
-        id:"",
+        // id:"",
         foto: "",
         apelido: "",
         nome: "",
@@ -163,12 +163,18 @@ function EditarCliente () {
                            type="submit" 
                            className="btn btn-success"
                            >
-                           Criar Cliente
+                           Salvar Alterações
                         </button>
 
+                        <button 
+                           type="submit" 
+                           className="btn btn-warning"
+                           >
+                           Deletar Cliente
+                        </button>
                                                          
                       </form>
-
+                          
                      
                    </div>
                    

@@ -34,7 +34,7 @@ function App() {
           <Switch>
             <Route exact path="/cliente" component={CriarCliente} />
             <Route exact path="/cliente/editarcliente/:id" component={EditarCliente} />
-            <Route path="/cliente/detalhedocliente/:id" component={DetalhesDoCliente} />
+            <Route exact path="/cliente/detalhedocliente/:id" component={DetalhesDoCliente} />
             
           </Switch>
       </BrowserRouter>
