@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import { useParams } from "react-router";
+import { useParams, useHistory } from "react-router";
 import axios from "axios";
 
 function EditarCliente () {
 
-    const [clienteInfo, setClienteInfo] = useState({
-        // id:"",
+    const [clienteEdit, setClienteEdit] = useState({
+       
         foto: "",
         apelido: "",
         nome: "",
@@ -19,25 +19,33 @@ function EditarCliente () {
         consultorPrincipal: ""
     });
 
-    const {id} = useParams()
+    const {id} = useParams();
+    const history =useHistory()
 
     useEffect(() => {
         axios
         .get(`https://ironrest.herokuapp.com/talk2go/${id}`)
         .then((response) => {
-            setClienteInfo({...response.data});
+            setClienteEdit({...response.data});
         })
-        .catch((err) => console.log(err));
+        .catch((err) => console.error(err));
 
     },[id]);
 
   function handleChange(event) {
-    setClienteInfo({...clienteInfo, [event.target.name]: event.target.value});
+    setClienteEdit({...clienteEdit, [event.target.name]: event.target.value});
   }
 
-  const handleCreateClient = async(event) => {
+  function handleEditClient (event) {
     event.preventDefault();
+
+    axios
+    .put(`https://ironrest.herokuapp.com/talk2go/${id}`,clienteEdit)
+    .then(() => history.push("/"))
+    .catch((err)=> console.error(err));
   }
+
+
 
     return (
         <div>
@@ -46,14 +54,14 @@ function EditarCliente () {
                <div className="col-5">Editar Cliente
                  <div className="row g-3">
                    <div className="col">
-                      <form onSubmit ={handleCreateClient} className="formCriaCliente">
+                      <form onSubmit ={handleEditClient} className="formCriaCliente">
 
                            <input 
                               className="form-control"
                               type='text'
                               name="foto"
                               placeholder="foto"
-                              value={clienteInfo.foto}
+                              value={clienteEdit.foto}
                               onChange={handleChange}
                           />
                           {/* <span className="message error">Erro text Example</span>
@@ -64,7 +72,7 @@ function EditarCliente () {
                               type='text'
                               name="apelido"
                               placeholder="apelido"
-                              value={clienteInfo.apelido}
+                              value={clienteEdit.apelido}
                               onChange={handleChange}
                           />
                           <input
@@ -72,7 +80,7 @@ function EditarCliente () {
                               type='text'
                               name="nome"
                               placeholder="nome completo"
-                              value={clienteInfo.nome}
+                              value={clienteEdit.nome}
                               onChange={handleChange}
                           />
 
@@ -82,7 +90,7 @@ function EditarCliente () {
                               type='text'
                               name="celular"
                               placeholder="celular"
-                              value={clienteInfo.celular}
+                              value={clienteEdit.celular}
                               onChange={handleChange}
                           />
                                <fieldset className="row mb-3">
@@ -109,7 +117,7 @@ function EditarCliente () {
                               type='text'
                               name="email"
                               placeholder="e-mail"
-                              value={clienteInfo.email}
+                              value={clienteEdit.email}
                               onChange={handleChange}
                             />
 
@@ -118,7 +126,7 @@ function EditarCliente () {
                               type='text'
                               name="nascimento"
                               placeholder="data de nascimento"
-                              value={clienteInfo.email}
+                              value={clienteEdit.nascimento}
                               onChange={handleChange}
                             />
 
@@ -127,7 +135,7 @@ function EditarCliente () {
                               type='text'
                               name="RG"
                               placeholder="RG"
-                              value={clienteInfo.rg}
+                              value={clienteEdit.rg}
                               onChange={handleChange}
                           />
 
@@ -136,7 +144,7 @@ function EditarCliente () {
                               type='text'
                               name="CPF"
                               placeholder="CPF"
-                              value={clienteInfo.cpf}
+                              value={clienteEdit.cpf}
                               onChange={handleChange}
                           />
 
@@ -145,7 +153,7 @@ function EditarCliente () {
                               type='text'
                               name="Passaporte"
                               placeholder="Passaporte"
-                              value={clienteInfo.passaporte}
+                              value={clienteEdit.passaporte}
                               onChange={handleChange}
                           />
 
@@ -154,7 +162,7 @@ function EditarCliente () {
                               type='text'
                               name="ConsultorPrincipal"
                               placeholder="Consultor Principal "
-                              value={clienteInfo.consultorPrincipal}
+                              value={clienteEdit.consultorPrincipal}
                               onChange={handleChange}
                           />
 
@@ -163,18 +171,18 @@ function EditarCliente () {
                            type="submit" 
                            className="btn btn-success"
                            >
-                           Salvar Alterações
+                           editar Alterações
                         </button>
 
-                        <button 
+                        {/* <button 
                            type="submit" 
                            className="btn btn-warning"
                            >
                            Deletar Cliente
-                        </button>
+                        </button> */}
                                                          
                       </form>
-                          
+                          {/* parei no 00:43 da aula 2 de crud */}
                      
                    </div>
                    
