@@ -62,11 +62,11 @@ const TabelaClientes = () => {
                             <td>{clientes.passaporte}</td>
                             <td>{clientes.consultorPrincipal}</td>
                             <td>
-                            <Link to={`/editarcliente/${clientes._id}`} className="btn btn-primary">Editar Cliente</Link>
-                            <Link to="/excluircliente" className="btn btn-secondary">Excluir Cliente</Link>
+                            <Link to={`/cliente/detalhedocliente/${clientes._id}`} className="btn btn-primary">Detalhe do cliente</Link>
+                           
                             </td>
                     </tr>
-                    ))}   {/* vou chamar aqui os clientes do banco de dados -com props e map? AULA DE FORMA 00:22:20 e em 00:33:21 */}
+                    ))}   
                 </tbody>
         </table>
     );
