@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useParams, useHistory } from "react-router";
 import axios from "axios";
+import "./EditarCliente.css";
+import ModalConfirmacao from "../ModaldeConfirmação";
 
 function EditarCliente () {
 
@@ -18,6 +20,17 @@ function EditarCliente () {
         passaporte: "",
         consultorPrincipal: ""
     });
+
+
+    const [showModal, setShowModal] = useState(false);
+
+    function handleModalOpen () {
+        setShowModal(true);
+    }
+
+    function handleModalClose () {
+        setShowModal(false);
+    }
 
     const {id} = useParams();
     const history =useHistory()
@@ -56,43 +69,43 @@ function EditarCliente () {
                    <div className="col">
                       <form onSubmit ={handleEditClient} className="formCriaCliente">
 
-                           <input 
+                            <input 
                               className="form-control"
                               type='text'
                               name="foto"
                               placeholder="foto"
                               value={clienteEdit.foto}
                               onChange={handleChange}
-                          />
+                            />
                           {/* <span className="message error">Erro text Example</span>
                           <span className="message success">Ok</span> */}
 
-                           <input 
+                            <input 
                               className="form-control"
                               type='text'
                               name="apelido"
                               placeholder="apelido"
                               value={clienteEdit.apelido}
                               onChange={handleChange}
-                          />
-                          <input
+                            />
+                            <input
                               className="form-control" 
                               type='text'
                               name="nome"
                               placeholder="nome completo"
                               value={clienteEdit.nome}
                               onChange={handleChange}
-                          />
+                            />
 
                            
-                           <input 
+                            <input 
                               className="form-control"
                               type='text'
                               name="celular"
                               placeholder="celular"
                               value={clienteEdit.celular}
                               onChange={handleChange}
-                          />
+                            />
                                <fieldset className="row mb-3">
                                    <legend className="col-form-label col-sm-8 pt-0"> Contato por WhatsApp</legend>
                                    <div className="col-sm-10">
@@ -130,59 +143,72 @@ function EditarCliente () {
                               onChange={handleChange}
                             />
 
-                           <input 
+                            <input 
                               className="form-control"
                               type='text'
                               name="RG"
                               placeholder="RG"
                               value={clienteEdit.rg}
                               onChange={handleChange}
-                          />
+                            />
 
-                           <input 
+                            <input 
                               className="form-control"
                               type='text'
                               name="CPF"
                               placeholder="CPF"
                               value={clienteEdit.cpf}
                               onChange={handleChange}
-                          />
+                            />
 
-                           <input 
+                            <input 
                               className="form-control"
                               type='text'
                               name="Passaporte"
                               placeholder="Passaporte"
                               value={clienteEdit.passaporte}
                               onChange={handleChange}
-                          />
+                            />
 
-                           <input 
+                            <input 
                               className="form-control"
                               type='text'
                               name="ConsultorPrincipal"
                               placeholder="Consultor Principal "
                               value={clienteEdit.consultorPrincipal}
                               onChange={handleChange}
-                          />
+                            />
 
+                        <div className="botoes">
+                          <button 
+                            type="submit" 
+                            className="btn btn-success"
+                            >
+                            Salvar Alterações
+                          </button>
 
-                        <button 
-                           type="submit" 
-                           className="btn btn-success"
-                           >
-                           editar Alterações
-                        </button>
+                          <button 
+                            className="btn btn-secondary"
+                            onClick={() => {
+                              history.goBack();
+                              }}
+                          >
+                            Voltar
+                          </button>
 
-                        {/* <button 
-                           type="submit" 
-                           className="btn btn-warning"
-                           >
-                           Deletar Cliente
-                        </button> */}
-                                                         
+                          <button 
+                            onClick={handleModalOpen}
+                            type="submit" 
+                            className="btn btn-warning"
+                            >
+                            Deletar Cliente
+                          </button>
+
+                          <ModalConfirmacao show={showModal} handleClose={handleModalClose}/>
+                        </div>                                  
+                      
                       </form>
-                          {/* parei no 00:43 da aula 2 de crud */}
+                         
                      
                    </div>
                    
@@ -198,3 +224,5 @@ function EditarCliente () {
 }
 
 export default EditarCliente
+
+

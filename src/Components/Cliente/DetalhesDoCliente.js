@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+
 function DetalhesDoCliente (props) {
     const [clienteInfo, setClienteInfo] = useState({
        
@@ -19,7 +20,11 @@ function DetalhesDoCliente (props) {
         consultorPrincipal: ""
     });
 
-    const {id} = useParams()
+    
+
+
+
+    const {id} = useParams();
     useEffect(() => {
         axios
         .get(`https://ironrest.herokuapp.com/talk2go/${id}`)
@@ -43,6 +48,8 @@ function DetalhesDoCliente (props) {
             <h2>{clienteInfo.email}</h2>
 
             <Link to={`/cliente/editarcliente/${clienteInfo._id}`}>Editar Cliente</Link>
+
+           
         </div>
     );
 }
