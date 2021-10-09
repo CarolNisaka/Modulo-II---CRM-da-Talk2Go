@@ -113,8 +113,10 @@ function NovaViagem () {
                     </div>      
 
                 <p>Ou esse é um novo cliente?</p>     
-                <button>Criar Cliente</button>
-                <p>fazer via route ou trazer o componente aqui?</p>
+                <div>
+                    <CriarCliente/>
+                </div>
+                
                        
                     
 

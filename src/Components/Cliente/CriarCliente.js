@@ -53,7 +53,7 @@ function CriarCliente () {
     return (
         <div>
             <div>
-            <NavBarInterna/>
+            {/* <NavBarInterna/> */}
              <div className="container">
                 <div className="row">
                     <div className="col-5">Criar Cliente
@@ -191,7 +191,7 @@ function CriarCliente () {
                     
                     <div className="col-7">
                     <h1>Lista de Clientes</h1>
-                    <TabelaClientes/>
+                     <TabelaClientes/>
                     </div>
                 </div>
             </div>

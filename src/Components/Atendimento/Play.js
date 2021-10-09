@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import NovaViagem from "./NovaViagem";
+import NavBarInterna from "../NavBarInterna";
 
 
 function Play () {
@@ -10,8 +11,11 @@ function Play () {
     // const [cancelarViagem, setCancelarViagem] = useState(false);
 
     return (
-        <div>
-       
+        <div className="Principal">
+
+            <div>
+                <NavBarInterna/>
+            </div>
             <div>
                 <button type="button" className="btn btn-primary" onClick={(event) => setNovaViagem(!novaViagem)}>Nova Viagem</button>
                 {novaViagem && <NovaViagem/>}
