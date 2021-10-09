@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useParams, useHistory } from "react-router";
 import axios from "axios";
 import "./EditarCliente.css";
-import ModalConfirmacao from "../ModaldeConfirmação";
+
 
 function EditarCliente () {
 
@@ -21,16 +21,6 @@ function EditarCliente () {
         consultorPrincipal: ""
     });
 
-
-    const [showModal, setShowModal] = useState(false);
-
-    function handleModalOpen () {
-        setShowModal(true);
-    }
-
-    function handleModalClose () {
-        setShowModal(false);
-    }
 
     const {id} = useParams();
     const history =useHistory()
@@ -52,9 +42,11 @@ function EditarCliente () {
   function handleEditClient (event) {
     event.preventDefault();
 
+    delete clienteEdit._id;
+
     axios
     .put(`https://ironrest.herokuapp.com/talk2go/${id}`,clienteEdit)
-    .then(() => history.push("/"))
+    .then(() => history.push(`/cliente/detalhedocliente/${id}`))
     .catch((err)=> console.error(err));
   }
 
@@ -192,19 +184,10 @@ function EditarCliente () {
                             onClick={() => {
                               history.goBack();
                               }}
-                          >
-                            Voltar
+                          >Voltar
                           </button>
 
-                          <button 
-                            onClick={handleModalOpen}
-                            type="submit" 
-                            className="btn btn-warning"
-                            >
-                            Deletar Cliente
-                          </button>
-
-                          <ModalConfirmacao show={showModal} handleClose={handleModalClose}/>
+                          
                         </div>                                  
                       
                       </form>

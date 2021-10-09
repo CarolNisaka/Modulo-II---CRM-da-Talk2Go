@@ -41,9 +41,9 @@ const TabelaClientes = () => {
             </thead>
                 <tbody>
                     {listaClientes.map(clientes => (
-                    <tr className="linha-cliente">
+                    <tr key={clientes._id} className="linha-cliente">
                         
-                        {/* //aqui que coloco a key????? */}
+                       
                             <td>{clientes._id}</td>
                             <td>
                                 <img 

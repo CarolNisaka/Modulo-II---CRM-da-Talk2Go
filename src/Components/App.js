@@ -13,6 +13,7 @@ import NovaViagem from './Atendimento/NovaViagem';
 import CriarCliente from './Cliente/CriarCliente';
 import DetalhesDoCliente from './Cliente/DetalhesDoCliente';
 import EditarCliente from './Cliente/EditarCliente';
+import DeletarCliente from './Cliente/DeletarCliente';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Switch>
             <Route exact path="/cliente" component={CriarCliente} />
             <Route exact path="/cliente/editarcliente/:id" component={EditarCliente} />
+            <Route exact path="/cliente/deletarcliente/:id" component={DeletarCliente} />
             <Route exact path="/cliente/detalhedocliente/:id" component={DetalhesDoCliente} />
             
           </Switch>

@@ -2,7 +2,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
+import ModalConfirmacao from "../ModaldeConfirmação";
+import { useHistory } from "react-router";
 
 
 function DetalhesDoCliente (props) {
@@ -20,10 +22,6 @@ function DetalhesDoCliente (props) {
         consultorPrincipal: ""
     });
 
-    
-
-
-
     const {id} = useParams();
     useEffect(() => {
         axios
@@ -34,6 +32,20 @@ function DetalhesDoCliente (props) {
         .catch((err) => console.log(err));
 
     },[id]);
+
+    //DELETAR UM CLIENTE!!!
+    const [showModal, setShowModal] = useState(false);
+
+    const history = useHistory();
+
+    function handleModalOpen () {
+        setShowModal(true);
+    }
+
+    function handleModalClose () {
+        setShowModal(false);
+    }
+
 
     return (
         <div>
@@ -47,11 +59,31 @@ function DetalhesDoCliente (props) {
             <h1>{clienteInfo.nome}</h1>
             <h2>{clienteInfo.email}</h2>
 
-            <Link to={`/cliente/editarcliente/${clienteInfo._id}`}>Editar Cliente</Link>
+            <button className="btn btn-warning">
+                <Link to={`/cliente/editarcliente/${clienteInfo._id}`}>Editar Cliente</Link>
+            </button>
+            
+            {/* No onClick de deletar, abre o modal de confirmaçao */}
+            <button 
+                onClick={(event) => {
+                    event.preventDefault();
+                    handleModalOpen();
+                    }}
+                type="submit" 
+                className="btn btn-danger"
+                >
+                Deletar Cliente
+            </button>
+                
+                {/* No modal, se cliecar em deletar, redireciona para rota de deletar */}
+            <ModalConfirmacao 
+                show={showModal} 
+                handleClose={handleModalClose}
+                handleAction={() => history.push(`/cliente/deletarcliente/${clienteInfo._id}`)}
 
-           
+            />
         </div>
     );
 }
-// cliente/editarcliente/:id
+
 export default DetalhesDoCliente
