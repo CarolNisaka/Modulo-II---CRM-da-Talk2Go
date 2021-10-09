@@ -9,9 +9,21 @@
     
 }
 
+
+.Principal{
+  display: flex;
+  align-items: flex-start;
+ 
+  
+}
+
+h3 {
+  color: rgb(107, 33, 177);
+}
+
 .button-inicial {
   margin-top: 15px;
-  width: 300px;
+  width: 200px;
   padding: 10px 5px;
   border-radius: 10px;
   border: 1px solid black;

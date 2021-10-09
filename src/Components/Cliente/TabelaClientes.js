@@ -25,7 +25,7 @@ const TabelaClientes = () => {
         <table className="table">
             <thead>
                 <tr>
-                    <th scope="col">Id</th>
+                    {/* <th scope="col">Id</th> */}
                     <th scope="col">Foto</th>
                     <th scope="col">Apelido</th>
                     <th scope="col">Nome</th>
@@ -44,7 +44,7 @@ const TabelaClientes = () => {
                     <tr key={clientes._id} className="linha-cliente">
                         
                        
-                            <td>{clientes._id}</td>
+                            {/* <td>{clientes._id}</td> */}
                             <td>
                                 <img 
                                 src={clientes.foto} 

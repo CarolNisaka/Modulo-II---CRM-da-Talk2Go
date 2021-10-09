@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./CriarCliente.css";
 import TabelaClientes from "./TabelaClientes";
 import axios from "axios";
+import NavBarInterna from "../NavBarInterna";
 
 
 // redirecionar depois de criar - 02:55 da aula de characters (crud) usando metodo history
@@ -51,6 +52,8 @@ function CriarCliente () {
 //    axios.post(url, OBJETO)
     return (
         <div>
+            <div>
+            <NavBarInterna/>
              <div className="container">
                 <div className="row">
                     <div className="col-5">Criar Cliente
@@ -191,6 +194,7 @@ function CriarCliente () {
                     <TabelaClientes/>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     );

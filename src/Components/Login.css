@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+}
+
+.Login{
+    text-align: center;
+    background-image: url(https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    
+}
+
+.App-logo {
+   margin: 0;
+}
+  
+/* @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+}
+   */
+.App-header {
+   
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: yellow;
+}
+  
+/* .App-link {
+    color: #61dafb;
+}
+   */
+/* .clientevent {
+    display: flex;
+    border: 2px solid blue;
+    justify-content: space-around;
+   
+} */
+
+/* .card {
+    width: 10rem;
+    
+} */
+/*   
+@keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+} */
+  

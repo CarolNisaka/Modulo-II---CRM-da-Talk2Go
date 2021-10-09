@@ -4,6 +4,7 @@ import { Switch } from 'react-router';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
 import Home from './Home';
+import SobreMap2Go from './SobreMap2Go';
 import SobreTalk2Go from './SobreTalk2Go';
 import NavBar from './NavBar';
 import Login from './Login';
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/" component={Login}/> 
           
           <Route exact path="/sobretalk2go" component={SobreTalk2Go} />
+          <Route exact path="/sobremap2go" component={SobreMap2Go} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/iniciaratendimento" component={IniciarAtendimento} />
           <Route exact path="/play" component={Play} />
