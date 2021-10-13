@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./CriarCliente.css";
-import TabelaClientes from "./TabelaClientes";
+// import TabelaClientes from "./TabelaClientes";
 import axios from "axios";
-import NavBarInterna from "../NavBarInterna";
-import { useHistory } from "react-router";
+// import NavBarInterna from "../NavBarInterna";
+// import { useHistory } from "react-router";
 
 
 // redirecionar depois de criar - 02:55 da aula de characters (crud) usando metodo history
@@ -21,7 +21,7 @@ function CriarCliente () {
     // const [passaporte, setPassaporte] = useState('');
     const [consutorPrincipal, setConsultorPrincipal] = useState('');
 
-    const history =useHistory()
+    // const history =useHistory()
     
 
    const handleCreateClient = async(event) => {
@@ -51,7 +51,7 @@ function CriarCliente () {
        }
 
    }
-//    axios.post(url, OBJETO)
+
     return (
         <div>
             <div>

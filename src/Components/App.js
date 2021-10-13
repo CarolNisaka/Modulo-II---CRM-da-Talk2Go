@@ -12,7 +12,7 @@ import Login from './Login';
 import IniciarAtendimento from './Atendimento/IniciarAtendimento';
 import Play from './Atendimento/Play';
 import NovaViagem from './Atendimento/NovaViagem';
-import CriarCliente from './Cliente/CriarCliente';
+// import CriarCliente from './Cliente/CriarCliente';
 import DetalhesDoCliente from './Cliente/DetalhesDoCliente';
 import EditarCliente from './Cliente/EditarCliente';
 import DeletarCliente from './Cliente/DeletarCliente';
