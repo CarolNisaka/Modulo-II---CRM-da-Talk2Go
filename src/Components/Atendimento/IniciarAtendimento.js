@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './IniciarAtendimento.css';
 import ShowCanais from './ShowCanais';
 import ShowCanaisDigitais from './ShowCanaisDigitais';
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 // import Play from './Play';
 // import  Container  from 'react-bootstrap/Container';
 import  Row  from 'react-bootstrap/Row';
@@ -64,14 +64,14 @@ function IniciarAtendimento () {
                             placeholder="o que o cliente deseja" />
                         </Form.Group>
                        
-                        <Button 
+                        <Link
                         variant="success" 
                         type="submit"
                         onClick={(Event) => setPlay(!inicioPlay)}
-                        href="/play"
+                        to="/play"
                         >
                             Play
-                        </Button>
+                        </Link>
 
                         <Button variant="danger" type="submit">
                             Declinar
