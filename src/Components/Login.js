@@ -23,7 +23,7 @@ function Login () {
         <div className="Login">
             <header className="App-header">
           
-                <img src={logoMap} className="App-logo" alt="logo" />
+                <img src={logoMap} style={{width:200}} className="App-logo" alt="logo" />
                
                 <Form onSubmit={handleLogin}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">

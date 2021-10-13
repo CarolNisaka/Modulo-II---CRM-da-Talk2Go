@@ -4,6 +4,7 @@ import { Switch } from 'react-router';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
 import Home from './Home';
+import Footer from './Footer';
 import SobreMap2Go from './SobreMap2Go';
 import SobreTalk2Go from './SobreTalk2Go';
 import NavBar from './NavBar';
@@ -15,6 +16,7 @@ import CriarCliente from './Cliente/CriarCliente';
 import DetalhesDoCliente from './Cliente/DetalhesDoCliente';
 import EditarCliente from './Cliente/EditarCliente';
 import DeletarCliente from './Cliente/DeletarCliente';
+import TabelaClientes from './Cliente/TabelaClientes';
 
 
 function App() {
@@ -35,12 +37,14 @@ function App() {
           <Route exact path="/novaviagem" component={NovaViagem} />
 
           <Switch>
-            <Route exact path="/cliente" component={CriarCliente} />
+            <Route exact path="/cliente" component={TabelaClientes} />
             <Route exact path="/cliente/editarcliente/:id" component={EditarCliente} />
             <Route exact path="/cliente/deletarcliente/:id" component={DeletarCliente} />
             <Route exact path="/cliente/detalhedocliente/:id" component={DetalhesDoCliente} />
             
           </Switch>
+          
+          <Footer/>
       </BrowserRouter>
     </div>
   );

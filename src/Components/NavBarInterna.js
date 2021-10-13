@@ -1,4 +1,6 @@
 import Nav from "react-bootstrap/Nav";
+import "./NavBarInterna.css";
+
 
 function NavBarInterna (props){
     return (
