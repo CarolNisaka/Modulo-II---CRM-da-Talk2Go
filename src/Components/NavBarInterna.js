@@ -1,56 +1,57 @@
 import Nav from "react-bootstrap/Nav";
 import "./NavBarInterna.css";
+import { Link } from "react-router-dom";
 
 
 function NavBarInterna (props){
     return (
         <Nav defaultActiveKey="/home" className="flex-column">
 
-            <Nav.Link 
-            eventKey="/home"
-            href="/home"
+            <Link 
+            
+            to="/home"
             >
             Home
-            </Nav.Link>
+            </Link>
 
-            <Nav.Link 
-            eventKey="">
+            <Link 
+            >
             Meu perfil
-            </Nav.Link>
+            </Link>
             
-            <Nav.Link 
-            eventKey="">
+            <Link 
+            >
             Meu DashBoard
-            </Nav.Link>
+            </Link>
         
-            <Nav.Link 
-            eventKey="/cliente"
-            href="/cliente"
+            <Link 
+            
+            to="/cliente"
             >
             Clientes
-            </Nav.Link>
+            </Link>
 
-            <Nav.Link 
-            eventKey="/iniciarAtendimento"
-            href="/iniciarAtendimento"
+            <Link 
+            // eventKey="/iniciarAtendimento"
+            to="/iniciarAtendimento"
             >
             Atender
-            </Nav.Link>
+            </Link>
 
-            <Nav.Link 
-            eventKey="">
+            <Link 
+            >
             Funil de Vendas
-            </Nav.Link>
+            </Link>
 
-            <Nav.Link 
-            eventKey="">
+            <Link 
+            >
             Jornada do Cliente
-            </Nav.Link>
+            </Link>
 
-            <Nav.Link 
-            eventKey="">
+            <Link 
+            >
             Financeiro
-            </Nav.Link>
+            </Link>
         </Nav>
     );
 }
