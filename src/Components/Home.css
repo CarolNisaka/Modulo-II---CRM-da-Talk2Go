@@ -9,13 +9,17 @@
 }
 .clientevent {
   display: flex;
-  border: 2px solid blue;
+  
   justify-content: space-around;
  
 }
 .card {
   width: 10rem;
   
+}
+
+h4 {
+  color: rgb(133, 110, 10)
 }
 
 

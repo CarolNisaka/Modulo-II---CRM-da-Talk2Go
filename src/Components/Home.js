@@ -3,6 +3,8 @@
 import './Home.css';
 import { Link,  } from 'react-router-dom';
 import NavBarInterna from './NavBarInterna';
+import { Card } from 'react-bootstrap';
+import {CardGroup} from "react-bootstrap";
 
 
 
@@ -17,7 +19,8 @@ function Home() {
 
             <div className="container">
             <div className="row">
-                <div className="col-9">
+                <div className="col-">
+                <h4>Eventos dos meus clientes</h4>
                 {/* //fazer um MAP aqui com eventos do cliente */}
                     <div className="clientevent">
                         <div className="card" >
@@ -72,7 +75,88 @@ function Home() {
 
                 
 
-                <div className="col-6">AQUI VAI UM DASHBOARD</div>
+                <div className="col-">
+                <h4>Minhas tarefas</h4>
+                
+                <CardGroup>
+                    <Card>
+                        <Card.Body>
+                        <Card.Title>Treinamento Cruzeiros</Card.Title>
+                        <Card.Text>
+                            <p>As 15:00 via zoom.</p>
+                            <p>Programado por: Emily</p>
+                            <p>Evento: Manual</p>
+                            <Link to="#" className="btn btn-secondary">Ver tarefa</Link>
+                        </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                        <small className="text-muted">Last updated 3 mins ago</small>
+                        </Card.Footer>
+                    </Card>
+                    <Card>
+                        <Card.Body>
+                        <Card.Title>Pre-Embarque</Card.Title>
+                        <Card.Text>
+                            <p>Pre-embarque do Pedro Campos</p>
+                            <p>Programado por: Michele</p>
+                            <p>Evento: Automático</p>
+                            <Link to="#" className="btn btn-secondary">Ver tarefa</Link>
+                        </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                        <small className="text-muted">Last updated 3 mins ago</small>
+                        </Card.Footer>
+                    </Card>
+                    <Card>
+                        <Card.Body>
+                        <Card.Title>Contato</Card.Title>
+                        <Card.Text>
+                            <p>Retornar ligação para Sr Luis Gomes </p>
+                            <p>Programado por: Daniele </p>
+                            <p>Evento: Manual</p>
+                            <Link to="#" className="btn btn-secondary">Ver tarefa</Link>
+                        </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                        <small className="text-muted">Last updated 3 mins ago</small>
+                        </Card.Footer>
+                    </Card>
+
+                    <Card>
+                        <Card.Body>
+                        <Card.Title>EUA</Card.Title>
+                        <Card.Text>
+                            <p>Verificar novas regras de entrada </p>
+                            <p>Programado por: Michele</p>
+                            <p>Evento: Manual</p>
+                            <Link to="#" className="btn btn-secondary">Ver tarefa</Link>
+                        </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                        <small className="text-muted">Last updated 3 mins ago</small>
+                        </Card.Footer>
+                    </Card>
+
+                    <Card>
+                        <Card.Body>
+                        <Card.Title>Follow Up</Card.Title>
+                        <Card.Text>
+                            <p>Follow up: 4 clientes</p>
+                            <p>Programado por: Sistema</p>
+                            <p>Evento: Automático</p>
+                            <Link to="#" className="btn btn-secondary">Ver tarefa</Link>
+                        </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                        <small className="text-muted">Last updated 3 mins ago</small>
+                        </Card.Footer>
+                    </Card>
+                </CardGroup>
+                
+                
+                
+                
+                </div>
             </div>
             </div>
             

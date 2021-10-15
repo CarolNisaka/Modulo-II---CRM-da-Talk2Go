@@ -65,12 +65,12 @@ function IniciarAtendimento () {
                         </Form.Group>
                        
                         <Link
-                        variant="success" 
-                        type="submit"
-                        onClick={(Event) => setPlay(!inicioPlay)}
-                        to="/play"
-                        >
-                            Play
+                            variant="success" 
+                            type="submit"
+                            onClick={(Event) => setPlay(!inicioPlay)}
+                            to="/play"
+                            >
+                                Play
                         </Link>
 
                         <Button variant="danger" type="submit">

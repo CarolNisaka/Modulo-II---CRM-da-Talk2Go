@@ -1,10 +1,9 @@
+import "./Footer.css";
+import Card from 'react-bootstrap/Card'
 
 function Footer () {
     return (
-        <div>
-            <p>Todos os direitos reservados a MAP2GO</p>
-            <p>Talk2GO - v1.1</p>
-        </div>
+        <Card.Footer className="text-muted">Todos os direitos reservados a Map2go</Card.Footer>
     );
 }
 

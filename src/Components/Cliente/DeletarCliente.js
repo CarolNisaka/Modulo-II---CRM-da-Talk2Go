@@ -10,7 +10,7 @@ function DeletarCliente () {
     useEffect(() => {
         axios
         .delete(`https://ironrest.herokuapp.com/talk2go/${id}`)
-        .then(() => history.push(`/home`))
+        .then(() => history.push(`/cliente`))
         .catch(err => console.error(err))
     }, [history, id])
 

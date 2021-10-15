@@ -1,6 +1,15 @@
 import Nav from "react-bootstrap/Nav";
 import "./NavBarInterna.css";
 import { Link } from "react-router-dom";
+import {AiFillHome} from "react-icons/ai";
+import {BsPersonCircle} from "react-icons/bs"
+import {RiDashboardFill} from "react-icons/ri"
+import {IoIosPeople} from "react-icons/io"
+import {FaPeopleArrows} from "react-icons/fa"
+import {FaFunnelDollar} from "react-icons/fa"
+import {GiJourney} from "react-icons/gi"
+import {MdOutlineAttachMoney} from "react-icons/md"
+
 
 
 function NavBarInterna (props){
@@ -11,46 +20,48 @@ function NavBarInterna (props){
             
             to="/home"
             >
-            Home
+             <AiFillHome size="40px"/>
             </Link>
 
-            <Link 
-            >
-            Meu perfil
-            </Link>
+           
             
             <Link 
             >
-            Meu DashBoard
+            <RiDashboardFill size="40px"/>
             </Link>
         
             <Link 
-            
+            className="cliente"
             to="/cliente"
             >
-            Clientes
+            <IoIosPeople size="40px"/>
             </Link>
 
             <Link 
-            // eventKey="/iniciarAtendimento"
+            className="atender"
             to="/iniciarAtendimento"
             >
-            Atender
+            <FaPeopleArrows size="40px" />
             </Link>
 
             <Link 
             >
-            Funil de Vendas
+            <FaFunnelDollar size="40px"/>
             </Link>
 
             <Link 
             >
-            Jornada do Cliente
+            <GiJourney size="40px"/>
             </Link>
 
             <Link 
             >
-            Financeiro
+            <MdOutlineAttachMoney size="40px"/>
+            </Link>
+
+            <Link 
+            >
+            <BsPersonCircle size="40px"/>
             </Link>
         </Nav>
     );

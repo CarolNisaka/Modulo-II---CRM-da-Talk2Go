@@ -1,6 +1,18 @@
 .flex-column {
-    border: solid 1px black;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color:rgb(162, 184, 184)
+   
+    margin: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size: larger;
     
+   
+}
+
+.atender {
+    color: rgb(221, 201, 25);
+    size: 90px;
+}
+
+.cliente {
+    color: rgb(133, 110, 10)
 }

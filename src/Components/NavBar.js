@@ -1,30 +1,21 @@
 import {Link} from 'react-router-dom';
-import { Nav } from 'react-bootstrap';
+import logoMap from '../logoMap.jpeg';
 
 
 function NavBar () {
     return (
-        <Nav defaultActiveKey="/home" as="ul">
+      <nav className="navbar navbar-dark bg-dark">
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="/">
+            <img src={logoMap} alt="" width="30" height="24" className="d-inline-block align-text-top"/>
+          </Link>
 
-        <Nav.Item as="li">
-          <Link to="/">Login</Link>
-        </Nav.Item>
-
-        <Nav.Item as="li">
-          <Link 
-          to="/sobremap2go"
-          
-          >Map2Go</Link>
-        </Nav.Item>
-
-        <Nav.Item as="li">
-          <Link 
-          to="/sobretalk2go"
-          
-          >Talk2Go</Link>
-        </Nav.Item>
-
-      </Nav>
+          <div class="container-md">
+            <Link class="navbar-brand" to="/sobremap2go">Map2go</Link>
+            <Link class="navbar-brand" to="/sobretalk2go">Talk2Go</Link>
+          </div>
+        </div>
+      </nav>
     );
 }
 

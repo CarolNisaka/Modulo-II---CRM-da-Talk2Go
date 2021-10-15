@@ -3,7 +3,7 @@ import "./CriarCliente.css";
 // import TabelaClientes from "./TabelaClientes";
 import axios from "axios";
 // import NavBarInterna from "../NavBarInterna";
-// import { useHistory } from "react-router";
+import { useHistory } from "react-router";
 
 
 // redirecionar depois de criar - 02:55 da aula de characters (crud) usando metodo history
@@ -15,13 +15,9 @@ function CriarCliente () {
     const [nome, setNome] = useState('');
     const [celular, setCelular] = useState('');
     const [email, setEmail] = useState('');
-    // const [nascimento, setNascimento] = useState('');
-    // const [rg, setRg] = useState('');
-    // const [cpf, setCpf] = useState('');
-    // const [passaporte, setPassaporte] = useState('');
     const [consutorPrincipal, setConsultorPrincipal] = useState('');
 
-    // const history =useHistory()
+    const history =useHistory()
     
 
    const handleCreateClient = async(event) => {
@@ -36,15 +32,12 @@ function CriarCliente () {
             nome: nome,
             celular: celular,
             email: email,
-            // nascimento: nascimento,
-            // rg: rg,
-            // cpf: cpf,
-            // passaporte: passaporte,
             consultorPrincipal: consutorPrincipal
         }
 
         )
         console.log(response.data.ops);
+        history.push('/cliente')
         
        }catch(err){
         console.log(err)
@@ -177,8 +170,8 @@ function CriarCliente () {
                             <button 
                                 type="submit" 
                                 className="btn btn-success"
-                            //     onClick={() => {
-                            //      history.goBack();
+                                // onClick={() => {
+                                //  history.go(`/cliente`);
                             //  }}
                                 >
                                 Criar Cliente
@@ -194,10 +187,7 @@ function CriarCliente () {
                     
                     </div>
                     
-                    {/* <div className="col-7"> */}
-                    {/* <h1>Lista de Clientes</h1> */}
-                     {/* <TabelaClientes/> */}
-                    {/* </div> */}
+                    {/* (() => history.push(`/cliente`)) */}
                 </div>
             </div>
             </div>
