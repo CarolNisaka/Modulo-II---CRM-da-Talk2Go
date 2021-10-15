@@ -70,7 +70,7 @@ function IniciarAtendimento () {
                             onClick={(Event) => setPlay(!inicioPlay)}
                             to="/play"
                             >
-                                Play
+                            <Button variant="success" type="submit">Play</Button>
                         </Link>
 
                         <Button variant="danger" type="submit">

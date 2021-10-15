@@ -95,14 +95,14 @@ function CriarCliente () {
                                />
                                     <fieldset className="row mb-3">
                                         <legend className="col-form-label col-sm-8 pt-0"> Contato por WhatsApp</legend>
-                                        <div className="col-sm-10">
+                                        <div className="col-sm-5">
                                         <div className="form-check">
                                             <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked/>
                                             <label className="form-check-label" >
                                             Sim
                                             </label>
                                         </div>
-                                        <div className="form-check">
+                                        <div className="form-check" >
                                             <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2"/>
                                             <label className="form-check-label" >
                                             Não
@@ -121,41 +121,7 @@ function CriarCliente () {
                                    onChange={(event) => setEmail(event.target.value)}
                                />
 
-                                {/* <input 
-                                   className="form-control"
-                                   type='text'
-                                   name="nascimento"
-                                   placeholder="data de nascimento"
-                                   value={nascimento}
-                                   onChange={(event)=> setNascimento(event.target.value)}
-                               />
-
-                                <input 
-                                   className="form-control"
-                                   type='text'
-                                   name="RG"
-                                   placeholder="RG"
-                                   value={rg}
-                                   onChange={(event) => setRg(event.target.value)}
-                               />
-
-                                <input 
-                                   className="form-control"
-                                   type='text'
-                                   name="CPF"
-                                   placeholder="CPF"
-                                   value={cpf}
-                                   onChange={(event) => setCpf(event.target.value)}
-                               />
-
-                                <input 
-                                   className="form-control"
-                                   type='text'
-                                   name="Passaporte"
-                                   placeholder="Passaporte"
-                                   value={passaporte}
-                                   onChange={(event) => setPassaporte(event.target.value)}
-                               /> */}
+                            
 
                                 <input 
                                    className="form-control"
@@ -170,9 +136,6 @@ function CriarCliente () {
                             <button 
                                 type="submit" 
                                 className="btn btn-success"
-                                // onClick={() => {
-                                //  history.go(`/cliente`);
-                            //  }}
                                 >
                                 Criar Cliente
                            </button>
@@ -187,7 +150,7 @@ function CriarCliente () {
                     
                     </div>
                     
-                    {/* (() => history.push(`/cliente`)) */}
+                    
                 </div>
             </div>
             </div>

@@ -13,7 +13,7 @@ function NovaViagem () {
                             <input 
                             type='text'
                             name='name'
-                            placeholder='de um nome para a viagem do cliente'
+                            placeholder='a viagem do cliente'
                             // value={name}
                             // onChange={(event) => setName(event.target.value)}
                             
@@ -53,8 +53,8 @@ function NovaViagem () {
                         </div>
 
                         <form class="form-floating">
-                            <input type="email" class="form-control" id="floatingInputValue" placeholder="descreva o que o cliente quer" value=""/>
-                            <label for="floatingInputValue">Comentarios</label>
+                            
+                            <input type="text" className="form-control" id="specificSizeInputName" placeholder="valor estimado"/>
                         </form>
                 </section>
 

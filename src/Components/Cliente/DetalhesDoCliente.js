@@ -5,6 +5,7 @@ import axios from "axios";
 import { Link} from "react-router-dom";
 import ModalConfirmacao from "../ModaldeConfirmação";
 import { useHistory } from "react-router";
+import { Card } from "react-bootstrap";
 
 
 function DetalhesDoCliente (props) {
@@ -49,15 +50,27 @@ function DetalhesDoCliente (props) {
 
     return (
         <div>
-            <img
-                className="img-fluid"
-                src={clienteInfo.foto}
-                alt={clienteInfo.nome}
-                style={{maxWidth:"150px"}}
-            />
+
+        <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={clienteInfo.foto}/>
+        <Card.Body>
+            <Card.Title>{clienteInfo.nome}</Card.Title>
+            <Card.Text>
+            <p>Apelido: {clienteInfo.apelido}</p>
+            <p>Celular:{clienteInfo.celular}</p>
+            <p>E-mail:{clienteInfo.email}</p>
+            <p>Data de nascimento:{clienteInfo.nascimento}</p>
+            <p>RG: {clienteInfo.rg}</p>
+            <p>CPF: {clienteInfo.cpf}</p>
+            <p>Passaporte: {clienteInfo.passaporte}</p>
+            <p>Consultor Principal: {clienteInfo.consultorPrincipal}</p>
+            </Card.Text>
+        
+        </Card.Body>
+        </Card>
             
-            <h1>{clienteInfo.nome}</h1>
-            <h2>{clienteInfo.email}</h2>
+        
+       
 
             <button className="btn btn-warning">
                 <Link to={`/cliente/editarcliente/${clienteInfo._id}`}>Editar Cliente</Link>
