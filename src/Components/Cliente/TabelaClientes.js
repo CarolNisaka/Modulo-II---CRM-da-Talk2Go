@@ -28,6 +28,9 @@ const TabelaClientes = () => {
        <div className="principal">
        <NavBarInterna/>
        {/* <h1>Lista de clientes</h1> */}
+
+       <div>
+       <h1> Lista de clientes </h1>
         <Table responsive striped bordered hover size="sm">
             <thead>
                 <tr>
@@ -75,6 +78,7 @@ const TabelaClientes = () => {
                     ))}   
                 </tbody>
         </Table>
+        </div>
         </div>
     );
 }
