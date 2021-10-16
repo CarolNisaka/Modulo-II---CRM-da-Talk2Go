@@ -34,6 +34,7 @@ function DetalhesDoCliente (props) {
 
     },[id]);
 
+    
     //DELETAR UM CLIENTE!!!
     const [showModal, setShowModal] = useState(false);
 
@@ -56,14 +57,14 @@ function DetalhesDoCliente (props) {
         <Card.Body>
             <Card.Title>{clienteInfo.nome}</Card.Title>
             <Card.Text>
-            <p>Apelido: {clienteInfo.apelido}</p>
-            <p>Celular:{clienteInfo.celular}</p>
-            <p>E-mail:{clienteInfo.email}</p>
-            <p>Data de nascimento:{clienteInfo.nascimento}</p>
-            <p>RG: {clienteInfo.rg}</p>
-            <p>CPF: {clienteInfo.cpf}</p>
-            <p>Passaporte: {clienteInfo.passaporte}</p>
-            <p>Consultor Principal: {clienteInfo.consultorPrincipal}</p>
+                <p>Apelido: {clienteInfo.apelido}</p>
+                <p>Celular:{clienteInfo.celular}</p>
+                <p>E-mail:{clienteInfo.email}</p>
+                <p>Data de nascimento:{clienteInfo.nascimento}</p>
+                <p>RG: {clienteInfo.rg}</p>
+                <p>CPF: {clienteInfo.cpf}</p>
+                <p>Passaporte: {clienteInfo.passaporte}</p>
+                <p>Consultor Principal: {clienteInfo.consultorPrincipal}</p>
             </Card.Text>
         
         </Card.Body>

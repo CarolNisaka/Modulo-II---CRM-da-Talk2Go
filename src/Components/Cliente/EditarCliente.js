@@ -98,7 +98,7 @@ function EditarCliente () {
                               value={clienteEdit.celular}
                               onChange={handleChange}
                             />
-                               <fieldset className="row mb-3">
+                               {/* <fieldset className="row mb-3">
                                    <legend className="col-form-label col-sm-8 pt-0"> Contato por WhatsApp</legend>
                                    <div className="col-sm-10">
                                    <div className="form-check">
@@ -115,7 +115,7 @@ function EditarCliente () {
                                    </div>
                                    
                                    </div>
-                               </fieldset>
+                               </fieldset> */}
 
                             <input 
                               className="form-control"
@@ -138,7 +138,7 @@ function EditarCliente () {
                             <input 
                               className="form-control"
                               type='text'
-                              name="RG"
+                              name="rg"
                               placeholder="RG"
                               value={clienteEdit.rg}
                               onChange={handleChange}
@@ -147,7 +147,7 @@ function EditarCliente () {
                             <input 
                               className="form-control"
                               type='text'
-                              name="CPF"
+                              name="cpf"
                               placeholder="CPF"
                               value={clienteEdit.cpf}
                               onChange={handleChange}
@@ -156,7 +156,7 @@ function EditarCliente () {
                             <input 
                               className="form-control"
                               type='text'
-                              name="Passaporte"
+                              name="passaporte"
                               placeholder="Passaporte"
                               value={clienteEdit.passaporte}
                               onChange={handleChange}
@@ -165,7 +165,7 @@ function EditarCliente () {
                             <input 
                               className="form-control"
                               type='text'
-                              name="ConsultorPrincipal"
+                              name="consultorPrincipal"
                               placeholder="Consultor Principal "
                               value={clienteEdit.consultorPrincipal}
                               onChange={handleChange}

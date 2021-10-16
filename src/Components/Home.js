@@ -8,7 +8,7 @@ import {CardGroup} from "react-bootstrap";
 
 
 
-function Home() {
+function Home(props) {
     return(
 
             <div className="principal">

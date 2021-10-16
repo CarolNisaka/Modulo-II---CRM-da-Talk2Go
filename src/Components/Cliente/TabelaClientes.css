@@ -1,23 +1,7 @@
 
 
-.table {
-    border: 2px solid green;
-    margin-top: 40px;
-    
-}
-
-.linha-cliente {
-    text-align: center;
-}
-
-.linha-cliente td{
-   padding: 0 30px;
-    
-}
-
 .linha-cliente img{
-    width: 150px;
+    width: 130px;
     
-}
+} 
 
-/* parei no 00:27:00 do video de forms */

@@ -3,6 +3,7 @@ import './TabelaClientes.css';
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Table from 'react-bootstrap/Table';
 
 const TabelaClientes = () => {
 
@@ -22,21 +23,21 @@ const TabelaClientes = () => {
     
     //GET - SALVA NO OBJETO RESPONSE - INFO VAI ESTAR DENTRO DE RESPONSE.DATA - COLOCA ESSAS INFO DENTRO DO MEU STATE
     return (
-        <table className="table">
+        <Table responsive striped bordered hover size="sm">
             <thead>
                 <tr>
                     {/* <th scope="col">Id</th> */}
-                    <th scope="col">Foto</th>
-                    <th scope="col">Apelido</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Celular</th>
-                    <th scope="col">E-mail</th>
-                    <th scope="col">Nascimento</th>
-                    <th scope="col">RG</th>
-                    <th scope="col">CPF</th>
-                    <th scope="col">Passaporte</th>
-                    <th scope="col">Consultor Principal</th>
-                    <th scope="col">Ação</th>
+                    <th >Foto</th>
+                    <th >Apelido</th>
+                    <th >Nome</th>
+                    <th >Celular</th>
+                    <th >E-mail</th>
+                    <th >Nascimento</th>
+                    <th >RG</th>
+                    <th >CPF</th>
+                    <th >Passaporte</th>
+                    <th >Consultor Principal</th>
+                    <th >Ação</th>
                 </tr>
             </thead>
                 <tbody>
@@ -68,7 +69,7 @@ const TabelaClientes = () => {
                     </tr>
                     ))}   
                 </tbody>
-        </table>
+        </Table>
     );
 }
 export default TabelaClientes

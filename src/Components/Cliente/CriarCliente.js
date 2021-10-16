@@ -93,7 +93,7 @@ function CriarCliente () {
                                    value={celular}
                                    onChange={(event) => setCelular(event.target.value)}
                                />
-                                    <fieldset className="row mb-3">
+                                    {/* <fieldset className="row mb-3">
                                         <legend className="col-form-label col-sm-8 pt-0"> Contato por WhatsApp</legend>
                                         <div className="col-sm-5">
                                         <div className="form-check">
@@ -110,7 +110,7 @@ function CriarCliente () {
                                         </div>
                                         
                                         </div>
-                                    </fieldset>
+                                    </fieldset> */}
 
                                 <input 
                                    className="form-control"
