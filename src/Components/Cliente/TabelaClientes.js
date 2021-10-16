@@ -44,7 +44,7 @@ const TabelaClientes = () => {
                     <th >RG</th>
                     <th >CPF</th>
                     <th >Passaporte</th>
-                    <th >Consultor Principal</th>
+                    <th >Consultor</th>
                     <th >Ação</th>
                 </tr>
             </thead>

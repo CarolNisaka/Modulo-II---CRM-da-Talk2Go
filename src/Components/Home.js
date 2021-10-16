@@ -35,23 +35,23 @@ function Home(props) {
         <div className="container">
             <div className="row">
                 <div className="col-">
-                <h4>Eventos dos meus clientes</h4>
-                <div className="clientevent">
+                    <h4>Eventos dos meus clientes</h4>
+                     <div className="clientevent">
                 
-                {listaClientes.map(clientes => (
-                    clientes.nome === "Julia Roberts" || 
-                    clientes.nome === "Brad Pitt" || 
-                    clientes.nome === "Roberto Carlos"
-                    ?
-                    <div className="card" >
-                            <img src={clientes.foto}
-                                className="card-img-top" 
-                                alt="..."
-                                style={{maxHeight:"130px"}}
-                            />
-                            <div className="card-body">
-                                <Link to={`/cliente/detalhedocliente/${clientes._id}`} className="btn btn-primary">{clientes.nome}</Link>
-                            </div>
+                        {listaClientes.map(clientes => (
+                            clientes.nome === "Julia Roberts" || 
+                            clientes.nome === "Brad Pitt" || 
+                            clientes.nome === "Roberto Carlos"
+                            ?
+                            <div className="card" >
+                                    <img src={clientes.foto}
+                                        className="card-img-top" 
+                                        alt="..."
+                                        style={{maxHeight:"130px"}}
+                                    />
+                                    <div className="card-body">
+                                        <Link to={`/cliente/detalhedocliente/${clientes._id}`} className="btn btn-primary">{clientes.nome}</Link>
+                                    </div>
 
                         </div> : null
                 ))}
@@ -60,7 +60,11 @@ function Home(props) {
                     </div>
                 </div>
 
-                
+                {/* <div>
+                    <h4>Metas</h4>
+                    <h6>Meta mês</h6>
+                    <h6>Meta dia</h6>
+                </div> */}
 
                 <div className="col-">
                 <h4>Minhas tarefas</h4>
@@ -76,9 +80,9 @@ function Home(props) {
                             <Link to="#" className="btn btn-secondary">Ver tarefa</Link>
                         </Card.Text>
                         </Card.Body>
-                        <Card.Footer>
+                        {/* <Card.Footer>
                         <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Footer>
+                        </Card.Footer> */}
                     </Card>
                     <Card>
                         <Card.Body>
@@ -90,9 +94,9 @@ function Home(props) {
                             <Link to="#" className="btn btn-secondary">Ver tarefa</Link>
                         </Card.Text>
                         </Card.Body>
-                        <Card.Footer>
+                        {/* <Card.Footer>
                         <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Footer>
+                        </Card.Footer> */}
                     </Card>
                     <Card>
                         <Card.Body>
@@ -104,9 +108,9 @@ function Home(props) {
                             <Link to="#" className="btn btn-secondary">Ver tarefa</Link>
                         </Card.Text>
                         </Card.Body>
-                        <Card.Footer>
+                        {/* <Card.Footer>
                         <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Footer>
+                        </Card.Footer> */}
                     </Card>
 
                     <Card>
@@ -119,9 +123,9 @@ function Home(props) {
                             <Link to="#" className="btn btn-secondary">Ver tarefa</Link>
                         </Card.Text>
                         </Card.Body>
-                        <Card.Footer>
+                        {/* <Card.Footer>
                         <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Footer>
+                        </Card.Footer> */}
                     </Card>
 
                     <Card>
@@ -134,9 +138,9 @@ function Home(props) {
                             <Link to="#" className="btn btn-secondary">Ver tarefa</Link>
                         </Card.Text>
                         </Card.Body>
-                        <Card.Footer>
+                        {/* <Card.Footer>
                         <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Footer>
+                        </Card.Footer> */}
                     </Card>
                 </CardGroup>
                 
