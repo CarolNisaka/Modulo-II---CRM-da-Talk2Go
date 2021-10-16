@@ -4,6 +4,8 @@ import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Table from 'react-bootstrap/Table';
+import '../NavBarInterna';
+import NavBarInterna from "../NavBarInterna";
 
 const TabelaClientes = () => {
 
@@ -23,6 +25,9 @@ const TabelaClientes = () => {
     
     //GET - SALVA NO OBJETO RESPONSE - INFO VAI ESTAR DENTRO DE RESPONSE.DATA - COLOCA ESSAS INFO DENTRO DO MEU STATE
     return (
+       <div className="principal">
+       <NavBarInterna/>
+       {/* <h1>Lista de clientes</h1> */}
         <Table responsive striped bordered hover size="sm">
             <thead>
                 <tr>
@@ -70,6 +75,7 @@ const TabelaClientes = () => {
                     ))}   
                 </tbody>
         </Table>
+        </div>
     );
 }
 export default TabelaClientes
