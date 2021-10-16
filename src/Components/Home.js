@@ -5,71 +5,58 @@ import { Link,  } from 'react-router-dom';
 import NavBarInterna from './NavBarInterna';
 import { Card } from 'react-bootstrap';
 import {CardGroup} from "react-bootstrap";
-
+import "./Cliente/TabelaClientes";
+import { useEffect } from 'react';
+import axios from 'axios';
+import { useState } from 'react';
 
 
 function Home(props) {
+
+    const [listaClientes, setListaClientes] = useState([]);
+
+    useEffect(() => {
+        axios
+        .get("https://ironrest.herokuapp.com/talk2go")
+        .then((response) => {
+            console.log(response.data);
+            setListaClientes([...response.data])
+        }).catch((err) => console.log(err));
+        
+    }, []);
     return(
 
-            <div className="principal">
+    <div className="principal">
 
-                <div>
-                    <NavBarInterna/>
-                </div>
+        <div>
+            <NavBarInterna/>
+        </div>
 
-            <div className="container">
+        <div className="container">
             <div className="row">
                 <div className="col-">
                 <h4>Eventos dos meus clientes</h4>
-                {/* //fazer um MAP aqui com eventos do cliente */}
-                    <div className="clientevent">
-                        <div className="card" >
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ47ayerDev610_07WrSdOAbbc_UBaBn6OTA&usqp=CAU" 
+                <div className="clientevent">
+                
+                {listaClientes.map(clientes => (
+                    clientes.nome === "Julia Roberts" || 
+                    clientes.nome === "Brad Pitt" || 
+                    clientes.nome === "Roberto Carlos"
+                    ?
+                    <div className="card" >
+                            <img src={clientes.foto}
                                 className="card-img-top" 
                                 alt="..."
                                 style={{maxHeight:"130px"}}
                             />
                             <div className="card-body">
-                                <h1 className="card-title">Joao </h1>
-                                <Link to="#" className="btn btn-primary">Ver evento</Link>
+                                <Link to={`/cliente/detalhedocliente/${clientes._id}`} className="btn btn-primary">{clientes.nome}</Link>
                             </div>
-                        </div>
+
+                        </div> : null
+                ))}
+                   
                         
-                        <div className="card" >
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIK5C5Y4rk-oVsDtchBPhn_9GxHuMtWhJ32Q&usqp=CAU"
-                                className="card-img-top" 
-                                alt="..."
-                                style={{maxHeight:"130px"}}
-                            />
-                            <div className="card-body">
-                                <h1 className="card-title">Maria</h1>
-                                <Link to="#" className="btn btn-primary">Ver evento</Link>
-                            </div>
-                        </div>
-
-                        <div className="card" >
-                            <img src="https://img.ibxk.com.br/2019/02/17/17124052466014.jpg"
-                                className="card-img-top" 
-                                alt="..."
-                                style={{maxHeight:"130px"}}
-                            />
-                            <div className="card-body">
-                                <h1 className="card-title">Pedro</h1>
-                                <Link to="#" className="btn btn-primary">Ver evento</Link>
-                            </div>
-                        </div>
-
-                        <div className="card" >
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFFt_e13xM_ZU-vB5qDjsgD_q1AkZEpU9m7w&usqp=CAU" 
-                                className="card-img-top" 
-                                alt="..."
-                                style={{maxHeight:"130px"}}
-                            />
-                            <div className="card-body">
-                                <h1 className="card-title">Joana</h1>
-                                <Link to="#" className="btn btn-primary">Ver evento</Link>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -158,10 +145,10 @@ function Home(props) {
                 
                 </div>
             </div>
-            </div>
-            
-            
         </div>
+            
+            
+    </div>
     );
 }
 

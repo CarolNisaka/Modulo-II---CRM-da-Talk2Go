@@ -22,7 +22,7 @@ Em qualquer navegador do seu computador acesse o link: https://616a4c800eca1b000
 ** Na lista de clientes, clique em DETALHES do cliente
 ** Edite ou delete um cliente
 ### BIBLIOTECA DO JOGO
-* Jogo feito usando HTML, CSS (com Bootstrap) e JavaScript
+* React, Axios, ReactBootstrap e API Ironrest
 
 ### MUITO OBRIGADA
 

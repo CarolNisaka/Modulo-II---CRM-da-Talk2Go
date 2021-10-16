@@ -13,13 +13,25 @@
   justify-content: space-around;
  
 }
-.card {
+/* .card {
   width: 10rem;
   
-}
+} */
 
 h4 {
   color: rgb(133, 110, 10)
 }
 
+.container {
+  padding: 10px;
+}
 
+.stories {
+  border-radius: 360px;
+  /* border-style: none; */
+  background-color: white;
+  /* border: solid 1px black; */
+  height: 200px;
+  /* width: 200px; */
+  
+}

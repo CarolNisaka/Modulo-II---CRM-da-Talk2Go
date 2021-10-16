@@ -9,6 +9,7 @@ import {FaPeopleArrows} from "react-icons/fa"
 import {FaFunnelDollar} from "react-icons/fa"
 import {GiJourney} from "react-icons/gi"
 import {MdOutlineAttachMoney} from "react-icons/md"
+import {MdOutlineLocalLibrary} from "react-icons/md"
 
 
 
@@ -17,51 +18,69 @@ function NavBarInterna (props){
         <Nav defaultActiveKey="/home" className="flex-column">
 
             <Link 
-            
             to="/home"
             >
-             <AiFillHome size="40px"/>
+             <AiFillHome size="35px"/>
             </Link>
 
-           
+           <br/>
             
             <Link 
             >
-            <RiDashboardFill size="40px"/>
+            <RiDashboardFill size="35px"/>
             </Link>
+
+            <br/>
         
             <Link 
             className="cliente"
             to="/cliente"
             >
-            <IoIosPeople size="40px"/>
+            <IoIosPeople size="35px"/>
             </Link>
+
+            <br/>
 
             <Link 
             className="atender"
             to="/iniciarAtendimento"
             >
-            <FaPeopleArrows size="40px" />
+            <FaPeopleArrows size="35px" />
             </Link>
+
+            <br/>
 
             <Link 
             >
-            <FaFunnelDollar size="40px"/>
+            <FaFunnelDollar size="35px"/>
             </Link>
+
+            <br/>
 
             <Link 
             >
-            <GiJourney size="40px"/>
+            <GiJourney size="35px"/>
             </Link>
+
+            <br/>
 
             <Link 
             >
-            <MdOutlineAttachMoney size="40px"/>
+            <MdOutlineAttachMoney size="35px"/>
             </Link>
+
+            <br/>
 
             <Link 
             >
-            <BsPersonCircle size="40px"/>
+            <MdOutlineLocalLibrary size="35px"/>
+            </Link>
+
+            <br/>
+
+            <Link 
+            >
+            <BsPersonCircle size="35px"/>
             </Link>
         </Nav>
     );
