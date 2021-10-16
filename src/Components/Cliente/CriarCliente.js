@@ -51,7 +51,7 @@ function CriarCliente () {
             {/* <NavBarInterna/> */}
              <div className="container">
                 <div className="row">
-                    <div className="col-5">Criar Cliente
+                    <div className="col-5">
                     <div className="row g-3">
                         <div className="col">
                            <form onSubmit ={handleCreateClient} className="formCriaCliente">
@@ -71,7 +71,7 @@ function CriarCliente () {
                                    className="form-control"
                                    type='text'
                                    name="apelido"
-                                   placeholder="apelido"
+                                   placeholder="nome provisório"
                                    value={apelido}
                                    onChange={(event)=> setApelido(event.target.value)}
                                />

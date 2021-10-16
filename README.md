@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Inicio de uma aplicação para pequenas empresas
+! [alt text] https://github.com/CarolNisaka/Modulo-II---CRM-da-Talk2Go
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### O QUE É
+Primeiros passos para contrução de base de clientes de uma pequena empresa
 
-## Available Scripts
+### LOCAL
+Em qualquer navegador do seu computador acesse o link: https://616a4c800eca1b0007300517--vigilant-heisenberg-72fc06.netlify.app/
 
-In the project directory, you can run:
+#### IMPORTANTE - Como essa aplicação será usada para TESTE em usuários reais antes de entrar em produção, os passos abaixo apenas para teste de navegabilidade.
+** Os campos de Login e senha são ficticios, portanto basta clicar em entrar
+** Na home são apresentados informações ficticias para melhor entendimento da ferramenta. Os usuários (linha de frente de um varejo) irão usar a aplicação para cadastrarem clientes e oportunidades de venda. 
+** Para iniciar, clique no ícone atender (em amarelo);
+** Clique no botao "Loja Metropole" e defina se o cliente está presencial ou a distancia
+** Crie uma primeira identificação para o cliente e tome nota do pedido do mesmo
+** Clique em PLAY
+** Clique em Nova Viagem e preencha os campos do lado esquerdo da tela
 
-### `npm start`
+#### INICIO DAS FUNCIONALIDADES - CAMPO CLIENTE
+* No campo CRIAR cliente, coloque as informações que possui nesse momento do atendimento.
+** Clique em CRIAR cliente
+** Na lista de clientes, clique em DETALHES do cliente
+** Edite ou delete um cliente
+### BIBLIOTECA DO JOGO
+* Jogo feito usando HTML, CSS (com Bootstrap) e JavaScript
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### MUITO OBRIGADA
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### SOBRE MIM
+Carol Nisaka
+(11)98956-4620
+carol.nisaka@gmail.com

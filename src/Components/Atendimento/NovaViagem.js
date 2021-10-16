@@ -96,7 +96,7 @@ function NovaViagem () {
                 </section>
                 </div>
             <div className="col-5">
-                <p>O Joao (apelido) é o ?</p>
+                <h3>O Joao (nome provisório) é o ?</h3>
                     <div class="input-group mb-3">
                     <input 
                     type="text" 
@@ -112,7 +112,7 @@ function NovaViagem () {
                     <button class="btn btn-outline-secondary" type="button" id="button-addon2">Sim</button>
                     </div>      
 
-                <p>Ou esse é um novo cliente?</p>     
+                <h3>Ou esse é um novo cliente?</h3>     
                 <div>
                     <CriarCliente/>
                 </div>
