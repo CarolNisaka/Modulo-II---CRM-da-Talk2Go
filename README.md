@@ -5,7 +5,7 @@
 Primeiros passos para contrução de base de clientes de uma pequena empresa
 
 ### LOCAL
-Em qualquer navegador do seu computador acesse o link: https://616aefd835ee3600078213d6--vigilant-heisenberg-72fc06.netlify.app
+Em qualquer navegador do seu computador acesse o link: https://616af61a9fb3170007f45bdb--vigilant-heisenberg-72fc06.netlify.app/
 
 #### IMPORTANTE - Como essa aplicação será usada para TESTE em usuários reais antes de entrar em produção, os passos abaixo apenas para teste de navegabilidade.
 ** Os campos de Login e senha são ficticios, portanto basta clicar em entrar
